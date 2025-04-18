@@ -2,11 +2,13 @@
 
 ## Project/Goals
 This project fetches real-time data of bike stations from the Bicing API.
- This data provides information on bike stations, it extracts key details such as the station's name, latitude, longitude, and the number of free bikes available at each station. This data was then converted into a structured Pandas Data Frame, which can be further analyzed or used for predictions or reports. 
-The data from Yelp API was also fetched and it provides nearby restaurant information.
+ This data provides information on bike stations, it extracts key details such as the station's name, latitude, longitude, and the number of free bikes available at each station. This data was then converted into a structured Pandas Data Frame, which can be further analyzed or used for predictions or reports.
+ The data from Yelp API was also fetched and it provides nearby restaurant information.
+
 A single comprehensive Data Frame containing bike station data and Yelp data predicted bike availability at different stations. 
 It allows analysis of the relationship between bike station availability and nearby restaurants, which can be useful for providing recommendations, insights, or building predictive models.
  The data will be used for classification tasks such as predicting the availability of bikes at the stations based on nearby restaurant data and other features.
+ 
 A regression model was built to predict the number of free bikes available at bike stations based on various restaurant-related features. The goal was to determine how factors like restaurant ratings, review count, and proximity (distance) affect bike availability at nearby stations.
 A classification model was built 
 The goal was to predict bike availability at various stations using a classification model. Incorporation of external data from Yelp about nearby restaurants enriches the prediction process and identifies any patterns that might influence bike availability. This can help users find stations with better bike availability, potentially near highly rated restaurants or places with high foot traffic.
@@ -77,8 +79,10 @@ p-values: Statistical significance of each feature. Features with a p-value less
 This model helps understand how various restaurant-related factors (such as rating, review count, and proximity) influence bike station availability. By interpreting the coefficients and statistical significance of the features, informed decisions can be made about where to place more bike stations or how to improve bike availability near popular restaurants.
 
 ## Challenges 
-API Rate Limits: The Yelp API had rate limits that needed to be managed. A time.sleep() function is used to pause the requests and avoid exceeding the limit.
+API Rate Limits: The Yelp API had rate limits that needed to be managed.A time.sleep() function was used to pause the requests and avoid exceeding the limit.
+
 Data Matching: Some bike stations did not have any nearby restaurants, which created gaps in the dataset.
+
 ## Future Goals
 Include other relevant features such as weather conditions, or population density. 
 Incorporate time-based data (e.g., bike availability at different times of day) to improve predictions.
